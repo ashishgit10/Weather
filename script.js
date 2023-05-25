@@ -80,7 +80,8 @@ setInterval(() => {
   const apmp = hours >= 12 ? "PM " : "AM";
   const min = minutes < 10 ? "0" + minutes : minutes;
   const hrs = hrin12format < 10 ? "0" + hrin12format : hrin12format;
-  time.innerHTML = ` <span class="tm">${hrs}:${min} ${apmp}</span>`;
+  const nhr = hrin12format == "00" ? "12" : hrin12format;
+  time.innerHTML = ` <span class="tm">${nhr}:${min} ${apmp}</span>`;
   dt.innerHTML = `<span class="dt1"> ${dy[day]}, ${date} ${mth[month]}</span>`;
 }, 1000);
 

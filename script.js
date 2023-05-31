@@ -18,7 +18,7 @@ btn.onclick = () => {
   )
     .then((res) => res.json())
     .then((data) => {
-      console.log(data.name);
+      /* console.log(data.name); */
       /*  console.log(data);
       console.log(data.main.temp_min);
       console.log(data.weather[0].main);
@@ -34,9 +34,8 @@ btn.onclick = () => {
       const mm = newdt.getMinutes();
       let mm2 = mm < 10 ? "0" + mm : mm; */
       result.innerHTML = `
-      <h3 class="imgbg"><img class="img" src="https://openweathermap.org/img/wn/${
-        data.weather[0].icon
-      }.png"</h3>
+      <h3 class="imgbg"><img class="img" src="https://openweathermap.org/img/wn/${data.weather[0].icon
+        }.png"</h3>
         <h1 class="tmp">${(data.main.temp - 273).toFixed(1)} &#176;C</h1>
         <h2>${data.weather[0].main}</h2>
         <h5> Feels Like : ${(data.main.feels_like - 273).toFixed(
@@ -99,11 +98,10 @@ locatebtn.onclick = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        /* console.log(data); */
         result.innerHTML = `
-        <h3 class="imgbg"><img class="img" src="https://openweathermap.org/img/wn/${
-          data.weather[0].icon
-        }.png"</h3>
+        <h3 class="imgbg"><img class="img" src="https://openweathermap.org/img/wn/${data.weather[0].icon
+          }.png"</h3>
           <h1 class="tmp">${(data.main.temp - 273).toFixed(1)} &#176;C</h1>
           <h2>${data.weather[0].main}</h2>
           <h5> Feels Like : ${(data.main.feels_like - 273).toFixed(
